@@ -57,18 +57,16 @@ static void MX_GPIO_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-/**
-  * @brief  Meretarget fungsi _write (yang digunakan oleh printf) ke ITM.
-  */
-int _write(int file, char *ptr, int len)
-{
+// Fungsi Untuk Debuging printf ke ITM
+int _write(int file, char *ptr, int len) {
   int DataIdx;
-  for (DataIdx = 0; DataIdx < len; DataIdx++)
-  {
-    ITM_SendChar(*ptr++); // Mengirim karakter satu per satu via SWO
+  for (DataIdx = 0; DataIdx < len; DataIdx++) {
+    ITM_SendChar(*ptr++);
   }
   return len;
 }
+
+
 
 /* USER CODE END 0 */
 
@@ -103,7 +101,7 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
 
-  printf("Blinking Starting\n");
+  printf("Blinking Starting....\n");
 
   /* USER CODE END 2 */
 
@@ -111,26 +109,24 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   uint32_t now = 0, last_blink = 0, last_tick = 0, loop_cnt = 0;
-
   while (1)
   {
-
     now = HAL_GetTick();
 
-    if (now - last_blink >= 500) {
-        printf("Toogling GPIO\n");
-        HAL_GPIO_TogglePin(GPIOD, LED1_Blue_Pin|LED2_Red_Pin|LED3_Orange_Pin|LED4_Green_Pin);
-        last_blink = now;
+    if (now - last_blink > 500) {
+      printf("Toggle LED\n");
+      HAL_GPIO_TogglePin(LED_Green_GPIO_Port, LED_Green_Pin);
+      last_blink = now;
     }
 
-    if (now - last_tick >= 1000) {
+    if (now - last_tick > 1000) {
       printf("Tick %lu (loop count = %lu)\n", now / 1000, loop_cnt);
       loop_cnt = 0;
       last_tick = now;
     }
 
     ++loop_cnt;
-
+    
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -203,23 +199,20 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOD, LED4_Green_Pin|LED3_Orange_Pin, GPIO_PIN_SET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOD, LED2_Red_Pin|LED1_Blue_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(LED_Green_GPIO_Port, LED_Green_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : BTN_Pin */
   GPIO_InitStruct.Pin = BTN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(BTN_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LED4_Green_Pin LED3_Orange_Pin LED2_Red_Pin LED1_Blue_Pin */
-  GPIO_InitStruct.Pin = LED4_Green_Pin|LED3_Orange_Pin|LED2_Red_Pin|LED1_Blue_Pin;
+  /*Configure GPIO pin : LED_Green_Pin */
+  GPIO_InitStruct.Pin = LED_Green_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+  HAL_GPIO_Init(LED_Green_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);

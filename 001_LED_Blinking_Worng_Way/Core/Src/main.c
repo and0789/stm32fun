@@ -22,8 +22,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "stdio.h"
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -56,19 +54,6 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
-/**
-  * @brief  Meretarget fungsi _write (yang digunakan oleh printf) ke ITM.
-  */
-int _write(int file, char *ptr, int len)
-{
-  int DataIdx;
-  for (DataIdx = 0; DataIdx < len; DataIdx++)
-  {
-    ITM_SendChar(*ptr++); // Mengirim karakter satu per satu via SWO
-  }
-  return len;
-}
 
 /* USER CODE END 0 */
 
@@ -103,33 +88,16 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
 
-  printf("Blinking Starting\n");
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
-  uint32_t now = 0, last_blink = 0, last_tick = 0, loop_cnt = 0;
-
   while (1)
   {
 
-    now = HAL_GetTick();
+    HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15);
 
-    if (now - last_blink >= 500) {
-        printf("Toogling GPIO\n");
-        HAL_GPIO_TogglePin(GPIOD, LED1_Blue_Pin|LED2_Red_Pin|LED3_Orange_Pin|LED4_Green_Pin);
-        last_blink = now;
-    }
-
-    if (now - last_tick >= 1000) {
-      printf("Tick %lu (loop count = %lu)\n", now / 1000, loop_cnt);
-      loop_cnt = 0;
-      last_tick = now;
-    }
-
-    ++loop_cnt;
+    HAL_Delay(500);
 
     /* USER CODE END WHILE */
 
@@ -155,12 +123,11 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
-  RCC_OscInitStruct.PLL.PLLM = 8;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+  RCC_OscInitStruct.PLL.PLLM = 4;
   RCC_OscInitStruct.PLL.PLLN = 168;
   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 4;
@@ -198,21 +165,12 @@ static void MX_GPIO_Init(void)
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOH_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOD, LED4_Green_Pin|LED3_Orange_Pin, GPIO_PIN_SET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOD, LED2_Red_Pin|LED1_Blue_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin : BTN_Pin */
-  GPIO_InitStruct.Pin = BTN_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(BTN_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_WritePin(GPIOD, LED4_Green_Pin|LED3_Orange_Pin|LED2_Red_Pin|LED1_Blue_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pins : LED4_Green_Pin LED3_Orange_Pin LED2_Red_Pin LED1_Blue_Pin */
   GPIO_InitStruct.Pin = LED4_Green_Pin|LED3_Orange_Pin|LED2_Red_Pin|LED1_Blue_Pin;
@@ -220,10 +178,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
-
-  /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI0_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(EXTI0_IRQn);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
