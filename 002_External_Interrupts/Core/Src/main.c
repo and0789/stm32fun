@@ -126,24 +126,30 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  uint32_t now = 0, last_blink = 0, last_tick = 0, loop_cnt = 0;
+  // uint32_t now = 0, last_blink = 0, last_tick = 0, loop_cnt = 0;
+  uint32_t now = 0, next_blink = 500, next_tick = 1000, loop_cnt = 0;
   while (1)
   {
     now = HAL_GetTick();
 
-    if (now - last_blink > blink_delays[blink_delay]) {
+    // if (now - last_blink >= blink_delays[blink_delay]) {
+    if (now  >= next_blink) {
       printf("Toggle LED\n");
       HAL_GPIO_TogglePin(LED_Green_GPIO_Port, LED_Green_Pin);
-      last_blink = now;
+      next_blink = now + blink_delays[blink_delay];
+      // last_blink = now;
     }
 
-    if (now - last_tick > 1000) {
+    // if (now - last_tick > 1000) {
+    if (now >= next_tick) {
       printf("Tick %lu (loop count = %lu)\n", now / 1000, loop_cnt);
       loop_cnt = 0;
-      last_tick = now;
+      next_tick = now + 1000;
+      // last_tick = now;
     }
 
-    if (btn_press  == 1) {
+    // if (btn_press  == 1) {
+    if (btn_press) {
       printf("Button Pressed\n");
       ++blink_delay;
       // Mengembalikan blik delay ke 0 jika sudah melebihi jumlah panjang array
