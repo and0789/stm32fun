@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="002_External_Interrupts" targetName="002_External_Interrupts.elf" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4515e801-f8d2-4e47-b6d0-fd09901cf641" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/.cproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/.idea/001_LED_Blinking1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/.idea/editor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/.mxproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/.settings/com.st.stm32cube.ide.mcu.sfrview.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/.settings/language.settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/.settings/stm32cubeide.project.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/001_LED_Blinking1 Debug.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/001_LED_BlinkingWorngWay.ioc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/CMakeLists_template.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Core/Inc/main.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Core/Inc/stm32f4xx_hal_conf.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Core/Inc/stm32f4xx_it.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Core/Src/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Core/Src/stm32f4xx_hal_msp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Core/Src/stm32f4xx_it.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Core/Src/syscalls.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Core/Src/sysmem.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Core/Src/system_stm32f4xx.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Core/Startup/startup_stm32f407vgtx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/001_LED_Blinking1.list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Core/Src/main.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Core/Src/stm32f4xx_hal_msp.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Core/Src/stm32f4xx_it.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Core/Src/subdir.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Core/Src/syscalls.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Core/Src/sysmem.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Core/Src/system_stm32f4xx.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Core/Startup/subdir.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.cyclo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/objects.list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/objects.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Debug/sources.mk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Device/ST/STM32F4xx/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/cachel1_armv7.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/cmsis_armcc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/cmsis_armclang.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/cmsis_armclang_ltm.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/cmsis_compiler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/cmsis_gcc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/cmsis_iccarm.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/cmsis_version.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_armv81mml.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_armv8mbl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_armv8mml.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_cm0.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_cm0plus.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_cm1.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_cm23.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_cm3.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_cm33.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_cm35p.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_cm4.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_cm55.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_cm7.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_cm85.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_sc000.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_sc300.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/core_starmc1.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/mpu_armv7.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/mpu_armv8.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/pac_armv81.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/pmu_armv8.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/Include/tz_context.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/CMSIS/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/STM32F407VGTX_FLASH.ld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../001_LED_Blinking1/STM32F407VGTX_RAM.ld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Src/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExternalInterrupts/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExternalInterrupts/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExternalInterrupts/ExternalInterrupts.ioc" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="35P37tBvf2K1COpINnXjYJvtxTM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/mc/STM32CubeIDE/src/stm32fun/002_External_Interrupts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="002_External_Interrupts.elf" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="002_External_Interrupts" TARGET_NAME="002_External_Interrupts.elf" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="002_External_Interrupts" RUN_TARGET_NAME="002_External_Interrupts.elf">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4515e801-f8d2-4e47-b6d0-fd09901cf641" name="Changes" comment="" />
+      <created>1762997715374</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762997715374</updated>
+      <workItem from="1762997716848" duration="1862000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -45,6 +45,17 @@
 
 /* USER CODE BEGIN PV */
 
+uint8_t btn_press = 0;
+
+uint16_t blink_delays[] = {
+  1000,
+  500,
+  250,
+  100
+};
+
+uint8_t blink_delay = 0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -64,6 +75,13 @@ int _write(int file, char *ptr, int len) {
     ITM_SendChar(*ptr++);
   }
   return len;
+}
+
+//
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+  if (GPIO_Pin == BTN_Pin) {
+    btn_press = 1;
+  }
 }
 
 
@@ -113,7 +131,7 @@ int main(void)
   {
     now = HAL_GetTick();
 
-    if (now - last_blink > 500) {
+    if (now - last_blink > blink_delays[blink_delay]) {
       printf("Toggle LED\n");
       HAL_GPIO_TogglePin(LED_Green_GPIO_Port, LED_Green_Pin);
       last_blink = now;
@@ -125,8 +143,18 @@ int main(void)
       last_tick = now;
     }
 
+    if (btn_press  == 1) {
+      printf("Button Pressed\n");
+      ++blink_delay;
+      // Mengembalikan blik delay ke 0 jika sudah melebihi jumlah panjang array
+      if (blink_delay >= sizeof(blink_delays) / sizeof(blink_delays[0])) {
+        blink_delay = 0;
+      }
+      btn_press = 0;
+    }
+
     ++loop_cnt;
-    
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
