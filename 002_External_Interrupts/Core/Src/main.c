@@ -45,16 +45,17 @@
 
 /* USER CODE BEGIN PV */
 
-uint8_t btn_press = 0;
+volatile uint8_t btn_press = 0;
 
-uint16_t blink_delays[] = {
+const uint16_t blink_delays[] = {
   1000,
   500,
-  250,
-  100
+  200,
+  50
 };
 
-uint8_t blink_delay = 0;
+uint8_t blink_index = 0;
+const uint8_t max_blink_index = sizeof(blink_delays) / sizeof(blink_delays[0]) - 1;
 
 /* USER CODE END PV */
 
@@ -68,23 +69,13 @@ static void MX_GPIO_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-// Fungsi Untuk Debuging printf ke ITM
+// Fungsi Untuk Debugging printf ke ITM
 int _write(int file, char *ptr, int len) {
-  int DataIdx;
-  for (DataIdx = 0; DataIdx < len; DataIdx++) {
+  for (int DataIdx = 0; DataIdx < len; DataIdx++) {
     ITM_SendChar(*ptr++);
   }
   return len;
 }
-
-//
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
-  if (GPIO_Pin == BTN_Pin) {
-    btn_press = 1;
-  }
-}
-
-
 
 /* USER CODE END 0 */
 
@@ -119,47 +110,50 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
 
-  printf("Blinking Starting....\n");
+  printf("System Started. Current Delay: %d ms\n", blink_delays[blink_index]);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  // uint32_t now = 0, last_blink = 0, last_tick = 0, loop_cnt = 0;
-  uint32_t now = 0, next_blink = 500, next_tick = 1000, loop_cnt = 0;
+  uint32_t now = 0;
+  uint32_t last_blink_time = 0;
+  uint32_t last_debug_time = 0;
+
+  uint32_t loop_cnt = 0;
+
+  // ReSharper disable once CppDFAEndlessLoop
   while (1)
   {
     now = HAL_GetTick();
 
-    // if (now - last_blink >= blink_delays[blink_delay]) {
-    if (now  >= next_blink) {
-      printf("Toggle LED\n");
+    if ((now - last_blink_time) >= blink_delays[blink_index]) {
       HAL_GPIO_TogglePin(LED_Green_GPIO_Port, LED_Green_Pin);
-      next_blink = now + blink_delays[blink_delay];
-      // last_blink = now;
+      last_blink_time = now;
     }
 
-    // if (now - last_tick > 1000) {
-    if (now >= next_tick) {
-      printf("Tick %lu (loop count = %lu)\n", now / 1000, loop_cnt);
-      loop_cnt = 0;
-      next_tick = now + 1000;
-      // last_tick = now;
-    }
-
-    // if (btn_press  == 1) {
     if (btn_press) {
-      printf("Button Pressed\n");
-      ++blink_delay;
-      // Mengembalikan blik delay ke 0 jika sudah melebihi jumlah panjang array
-      if (blink_delay >= sizeof(blink_delays) / sizeof(blink_delays[0])) {
-        blink_delay = 0;
-      }
       btn_press = 0;
+
+      blink_index++;
+      if (blink_index > max_blink_index) {
+        blink_index = 0;
+      }
+
+      printf("Button pressed! Now Delay: %d ms\n", blink_delays[blink_index]);
+
     }
 
-    ++loop_cnt;
+    if ((now - last_debug_time) >= 1000) {
+
+      printf("Tick %lu (loop count = %lu)\n", now / 1000, loop_cnt);
+
+      loop_cnt = 0;
+      last_debug_time = now;
+    }
+
+    loop_cnt++;
 
     /* USER CODE END WHILE */
 
@@ -214,6 +208,7 @@ void SystemClock_Config(void)
   }
 }
 
+// ReSharper disable once CppDoxygenUnresolvedReference
 /**
   * @brief GPIO Initialization Function
   * @param None
@@ -259,6 +254,18 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+  static uint32_t last_interrupt_time = 0;
+  const uint32_t current_time = HAL_GetTick();
+
+  if (GPIO_Pin == BTN_Pin) {
+    if ((current_time - last_interrupt_time ) > (200)) {
+      btn_press = 1;
+      last_interrupt_time = current_time;
+    }
+  }
+}
+
 /* USER CODE END 4 */
 
 /**
@@ -270,6 +277,7 @@ void Error_Handler(void)
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
   __disable_irq();
+  // ReSharper disable once CppDFAEndlessLoop
   while (1)
   {
   }
