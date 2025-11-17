@@ -1,0 +1,2 @@
+../trng/trng.c:10:6:trng_init	1
+../trng/trng.c:28:10:trng_get_random_number	4

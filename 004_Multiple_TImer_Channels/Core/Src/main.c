@@ -147,7 +147,6 @@ int main(void)
       } else if (pwm_value == 999) {
         pwm_change = -1;
       }
-
       next_change = now + 2;
     }
 
