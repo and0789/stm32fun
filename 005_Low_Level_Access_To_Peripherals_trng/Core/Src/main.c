@@ -66,6 +66,12 @@ int _write(int file, char *ptr, int len) {
   return len;
 }
 
+// Optimasi pemanggilan langsung
+inline uint32_t HAL_GetTick(void)
+{
+  return uwTick;
+}
+
 /* USER CODE END 0 */
 
 /**
