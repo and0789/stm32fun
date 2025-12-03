@@ -1,0 +1,10 @@
+20:49:16 **** Incremental Build of configuration Debug for project 002_External_Interrupts ****
+make -j7 all 
+arm-none-eabi-size  002_External_Interrupts.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8868	    104	   1912	  10884	   2a84	002_External_Interrupts.elf
+Finished building: default.size.stdout
+ 
+
+20:49:16 Build Finished. 0 errors, 0 warnings. (took 273ms)
+

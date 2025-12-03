@@ -1,0 +1,10 @@
+14:34:39 **** Incremental Build of configuration Debug for project 004_Multiple_TImer_Channels ****
+make -j7 all 
+arm-none-eabi-size  004_Multiple_TImer_Channels.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13384	    104	   1976	  15464	   3c68	004_Multiple_TImer_Channels.elf
+Finished building: default.size.stdout
+ 
+
+14:34:40 Build Finished. 0 errors, 0 warnings. (took 234ms)
+

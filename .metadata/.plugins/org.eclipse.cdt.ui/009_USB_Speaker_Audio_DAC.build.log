@@ -1,0 +1,10 @@
+17:51:49 **** Incremental Build of configuration Debug for project 009_USB_Speaker_Audio_DAC ****
+make -j7 all 
+arm-none-eabi-size  009_USB_Speaker_Audio_DAC.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 615828	    304	  75672	 691804	  a8e5c	009_USB_Speaker_Audio_DAC.elf
+Finished building: default.size.stdout
+ 
+
+17:51:50 Build Finished. 0 errors, 0 warnings. (took 1s.156ms)
+

@@ -1,0 +1,10 @@
+19:26:47 **** Incremental Build of configuration Debug for project 005_Low_Level_Access_Peripherals_LL ****
+make -j7 all 
+arm-none-eabi-size  005_Low_Level_Access_Peripherals_LL.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8384	    104	   1904	  10392	   2898	005_Low_Level_Access_Peripherals_LL.elf
+Finished building: default.size.stdout
+ 
+
+19:26:47 Build Finished. 0 errors, 0 warnings. (took 281ms)
+

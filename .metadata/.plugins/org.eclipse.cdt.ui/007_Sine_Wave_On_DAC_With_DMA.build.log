@@ -1,0 +1,10 @@
+18:52:59 **** Incremental Build of configuration Debug for project 007_Sine_Wave_On_DAC_With_DMA ****
+make -j7 all 
+arm-none-eabi-size  007_Sine_Wave_On_DAC_With_DMA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20936	    108	   2244	  23288	   5af8	007_Sine_Wave_On_DAC_With_DMA.elf
+Finished building: default.size.stdout
+ 
+
+18:52:59 Build Finished. 0 errors, 0 warnings. (took 286ms)
+

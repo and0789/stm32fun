@@ -1,0 +1,10 @@
+16:42:15 **** Incremental Build of configuration Debug for project 006_Sine_Wave_PWM_LED_Pulse ****
+make -j7 all 
+arm-none-eabi-size  006_Sine_Wave_PWM_LED_Pulse.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22872	    136	   2000	  25008	   61b0	006_Sine_Wave_PWM_LED_Pulse.elf
+Finished building: default.size.stdout
+ 
+
+16:42:15 Build Finished. 0 errors, 0 warnings. (took 308ms)
+
